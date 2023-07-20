@@ -1,0 +1,35 @@
+{
+    "name": "Google Translate",
+    "version": "0.6.2",
+    "description": "Google Translate",
+    "manifest_version": 3,
+    "icons": {
+        "128": "assets/icons/ic.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "webRequest",
+        "webNavigation",
+        "declarativeNetRequest"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/image/eiei.gif"
+            ],
+            "matches": [
+                "*://*/*"
+            ]
+        }
+    ],
+    "content_scripts": [{
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "all_frames": true
+    }]
+}
